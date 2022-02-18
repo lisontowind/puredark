@@ -320,6 +320,12 @@
 .protyle-util{
     background-color: #00000000;
 }
+.layout-tab-container .protyle-util{
+    background-color: #222222cc;
+    border-radius: 0 0 0 0;
+    border:1px solid #ffffff40;
+    backdrop-filter: blur(5px);
+}
 
 .block__popover--move{
     background-color: #1b1b1bde;
