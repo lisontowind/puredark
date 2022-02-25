@@ -519,6 +519,18 @@ mark {
     padding-top: 31px;
     background-color: #333333;
 } 
+
+.block__popover--move .protyle-content{
+    background-color: #33333300;
+}
+
+.block__popover--move .protyle-breadcrumb{
+    position: relative;
+    background: #00000000;
+    backdrop-filter: blur(0);
+}
+
+
 .spread-search__preview {
     background-color: #00000000;
 }
@@ -737,3 +749,11 @@ mark {
     backdrop-filter: blur(5px);
     z-index: 2;
 } 
+
+#configBazaarReadme{
+    z-index: 99;
+}
+
+.protyle-wysiwyg [data-node-id].li>[data-node-id]:before {
+    border-left: 1px solid #ffffff30;
+}
