@@ -780,3 +780,11 @@ mark {
 .layout__center .layout__resize--lr {
     border-left: 1px solid #ffffff25;
 }
+
+.layout__resize::after {
+    background-color:#00000000;
+}
+
+.layout__wnd--active .layout-tab-bar .item--focus {
+    box-shadow: 0 0 0 0;
+}
