@@ -1302,3 +1302,42 @@ div *[custom-f="dt"]>[data-type="NodeListItem"]::after{
 	 }
 }
 
+/* 表格 */
+.b3-typography table, .protyle-wysiwyg table{
+					
+	font-weight:500;
+	border-radius:4px;
+	border:1px solid var(--b3-border-color);
+}
+
+.b3-typography colgroup, .protyle-wysiwyg colgroup{
+	border-style:hidden;
+}
+.protyle-wysiwyg table tbody tr{
+	background-color:var(--b3-theme-background);
+}
+
+/* 自定义表格宽度 */
+.protyle-wysiwyg div.table[data-node-id]{
+    width: 100%;
+}
+.protyle-wysiwyg div.table[data-node-id] table {
+    width: auto;
+}
+.protyle-wysiwyg [data-node-id][custom-f~=auto] table {
+    width: auto !important;
+    white-space: nowrap;
+}
+
+/* 表头和表行格式一致 */
+.protyle-wysiwyg [data-node-id][custom-t~=biaotou] table th {
+    font-weight: normal !important;
+    text-align: left !important;
+    color: inherit !important;
+    background-color: var(--b3-theme-background) !important;
+}
+
+svg{
+    filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.516));  ;
+    
+}
