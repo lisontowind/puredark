@@ -1304,6 +1304,10 @@ div *[custom-f="dt"]>[data-type="NodeListItem"]::after{
 	100% {opacity:1;}
 }
 
+.protyle-toolbar {
+	animation: menu 0.15s ease-in-out;
+}
+
 /* 表格 */
 .b3-typography table, .protyle-wysiwyg table{
 					
