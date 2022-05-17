@@ -253,12 +253,15 @@
     border-bottom: 1px solid #404040;
 } */
 
-#dockLeft{
+.dock#dockLeft{
     border-right: 1px solid #404040;
+    box-sizing: border-box;
 }
 
-#dockRight{
+.dock#dockRight{
+    box-sizing: border-box;
     border-left: 1px solid #404040;
+    border-top: 1px solid #404040;
 }
 
 .layout-tab-bar .item--focus {
@@ -271,7 +274,7 @@
 }
 
 #layouts>.fn__flex:nth-child(3){
-    overflow-x:hidden;
+    overflow-x:hidden !important;
 }
 
 #layouts>.fn__flex:nth-child(3)>.fn__flex-column:first-child>.fn__flex:not(.fn__none){
@@ -393,7 +396,7 @@
 }
 
 .sy__backlink{
-    overflow-y: hidden;
+    overflow-y: hidden !important;
 }
 
 
@@ -403,10 +406,6 @@
 :hover>.block__icons{
     background-color: #ffffff10;
 
-}
-
-.fn__flex-1 {
-    overflow-y: overlay;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -955,11 +954,15 @@ div.sy__outline ul>ul{
     border-top: 1px solid #404040;
 }
 
+.fn__flex-1:not(.body--win32>.fn__flex-1:nth-child(5)) {
+    overflow-y: overlay !important;
+}
+
 .body--win32>.fn__flex-1:nth-child(5){
-    overflow: hidden;
+    overflow: hidden !important;
 }
 #layouts > .fn__flex:nth-child(3) {
-    overflow-y: hidden;
+    overflow-y: hidden !important;
 }
 #layouts >.layout__resize:nth-child(5){
     margin: -4px 0;
@@ -1311,7 +1314,7 @@ div *[custom-f="dt"]>[data-type="NodeListItem"]::after{
 }
 
 .b3-typography colgroup, .protyle-wysiwyg colgroup{
-	border-style:hidden;
+	border-style:hidden ;
 }
 .protyle-wysiwyg table tbody tr{
 	background-color:var(--b3-theme-background);
@@ -1341,3 +1344,8 @@ svg{
     filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.516));  ;
     
 }
+
+.protyle-content {
+    overflow: overlay;
+}
+
