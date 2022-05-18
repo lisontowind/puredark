@@ -148,7 +148,7 @@
     --b3-protyle-inline-blockref-color: #9876aa;
 
     /* PDF */
-    --b3-pdf-selection: #779170;
+    --b3-pdf-selection: rgb(79, 98, 116);
     --b3-pdf-sidebar-width: 200px;
     --b3-pdf-offset: 0;
     --b3-pdf-background1: var(--b3-theme-error);
@@ -201,7 +201,7 @@
     --custom-quote-r: "⸥";
 
     /* 列表颜色 */
-    --b3-border-color: rgba(230, 230, 230, .1);
+    /* --b3-border-color: rgba(230, 230, 230, .1); */
 	--surface-border-color: rgba(69, 74, 77);
 	--b3-color--square: var(--b3-border-color);
 	--b3-border-daotu: 2px solid var(--surface-border-color);
@@ -223,9 +223,10 @@
     mix-blend-mode: screen;
 }
 
-.b3-text-filed::-webkit-calendar-picker-indicator {
+.b3-text-field::-webkit-calendar-picker-indicator {
     filter: invert(1)
 }
+
 
 
 .protyle {
@@ -824,8 +825,8 @@ mark {
 }
 
 ::selection{
-    color: rgb(0, 0, 0);
-    background: rgb(124, 153, 180);
+    /* color: rgb(0, 0, 0); */
+    background: rgb(79, 98, 116);
 }
 
 .viewer-move{
@@ -1356,10 +1357,11 @@ svg{
 /* 设置正文背景颜色/A4纸大小  */
 .protyle-wysiwyg{
     width: calc(100% - 4cm);
-    margin: 25px auto 50px !important;
-    padding: 1.5cm !important;
+    margin: 0px auto 0px !important;
+    padding: 1cm 1.5cm 1cm 1.5cm !important;
     box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0);
-    min-height: 29.7cm;
+    border-top: solid 5px rgba(255, 255, 255, 0.08);
+    transition: 0.3s;
 } 
 
 
