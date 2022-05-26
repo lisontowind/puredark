@@ -960,7 +960,9 @@ div.sy__outline ul>ul{
 .fn__flex-1:not(.body--win32>.fn__flex-1:nth-child(5)) {
     overflow-y: overlay !important;
 }
-
+#layouts>.fn__flex:nth-child(3){
+    overflow-x:hidden !important;
+}
 /* 解决上下滑动的问题 */
 
 /* .body--win32>.fn__flex-1:nth-child(5){
@@ -969,9 +971,7 @@ div.sy__outline ul>ul{
 #layouts > .fn__flex:nth-child(3) {
     overflow-y: hidden !important;
 }
-#layouts>.fn__flex:nth-child(3){
-    overflow-x:hidden !important;
-}  */
+  */
 /* 解决上下滑动的问题 */
 
 #layouts >.layout__resize:nth-child(5){
