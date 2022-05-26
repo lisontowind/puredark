@@ -156,13 +156,22 @@ function MenuSeparator(className = 'b3-menu__separator') {
  * }
  * @returns {null} 没有找到块 ID */
 function getBlockSelected() {
-  let node_list = document.querySelectorAll('.protyle:not(.fn__none)>.protyle-content .protyle-wysiwyg--select');
+  if(document.querySelectorAll('.layout__wnd--active .protyle-wysiwyg--select').length > 0){
+    let node_list = document.querySelectorAll('.layout__wnd--active .protyle:not(.fn__none)>.protyle-content .protyle-wysiwyg--select');
     if (node_list.length === 1 && node_list[0].dataset.nodeId != null) return {
-        id: node_list[0].dataset.nodeId,
-        type: node_list[0].dataset.type,
-        subtype: node_list[0].dataset.subtype,
-    };
-    return null;
+      id: node_list[0].dataset.nodeId,
+      type: node_list[0].dataset.type,
+      subtype: node_list[0].dataset.subtype,
+      };
+  }else{
+    let node_list = document.querySelectorAll('.protyle:not(.fn__none)>.protyle-content .protyle-wysiwyg--select');
+    if (node_list.length === 1 && node_list[0].dataset.nodeId != null) return {
+      id: node_list[0].dataset.nodeId,
+      type: node_list[0].dataset.type,
+      subtype: node_list[0].dataset.subtype,
+      };
+  }
+  return null;
 }
 
 function ClickMonitor () {
@@ -366,4 +375,49 @@ function changeWidth(){
       a[i].style.setProperty('border-top','solid 5px rgba(255, 255, 255, 0.08)');
     }
   }
+  // insertCss("body",{
+  //   counterReset: "h1-count 0"
+  // });
+  // insertCss("body",{
+  //   counterReset: "h1-count 0"
+  // });
+  // insertCss("body",{
+  //   counterReset: "h1-count 0"
+  // });
+  // insertCss("body",{
+  //   counterReset: "h1-count 0"
+  // });
+  // insertCss("body",{
+  //   counterReset: "h1-count 0"
+  // });
+  // insertCss("body",{
+  //   counterReset: "h1-count 0"
+  // });
+  // insertCss("body",{
+  //   counterReset: "h1-count 0"
+  // });
+  // insertCss("body",{
+  //   counterReset: "h1-count 0"
+  // });
 }
+
+
+
+
+// console.log(document.styleSheets);
+
+// function insertCss(select,styles){
+//   if(document.styleSheets.length===0){//如果没有style标签,则创建一个style标签
+//       var style=document.createElement("style");
+//       document.head.appendChild(style);
+//   }
+//   var styleSheet=document.styleSheets[document.styleSheets.length-1];//如果有style 标签.则插入到最后一个style标签中
+//   var str=select+" {";//插入的内容必须是字符串,所以得把obj转化为字符串
+//   for(var prop in styles){
+//       str+=prop.replace(/([A-Z])/g,function(item){//使用正则把大写字母替换成 '-小写字母'
+//           return "-"+item.toLowerCase();
+//       })+":"+styles[prop]+";"
+//   }
+//   str+="}";
+//   styleSheet.insertRule(str,styleSheet.cssRules.length);//插入样式到最后一个style标签中的最后面
+// }

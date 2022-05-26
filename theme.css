@@ -254,16 +254,9 @@
     border-bottom: 1px solid #404040;
 } */
 
-.dock#dockLeft{
-    border-right: 1px solid #404040;
-    box-sizing: border-box;
-}
 
-.dock#dockRight{
-    box-sizing: border-box;
-    border-left: 1px solid #404040;
-    border-top: 1px solid #404040;
-}
+
+
 
 .layout-tab-bar .item--focus {
     background-color:#333333ee;
@@ -274,9 +267,6 @@
     border-radius: 0 0 0 0;
 }
 
-#layouts>.fn__flex:nth-child(3){
-    overflow-x:hidden !important;
-}
 
 #layouts>.fn__flex:nth-child(3)>.fn__flex-column:first-child>.fn__flex:not(.fn__none){
     border-right: 1px solid #404040;
@@ -565,9 +555,9 @@ mark {
 /* 标题自动编号 */
 /* body {
     counter-reset: h1-count 0;
-} */
+}
 
-/* .protyle-wysiwyg,
+.protyle-wysiwyg,
 .b3-typography {
     counter-reset: h1-count 0 h2-count 0 h3-count 0 h4-count 0 h5-count 0 h6-count 0;
 }
@@ -653,7 +643,7 @@ mark {
     float: left;
     font-size: var(--custom-h-num-font-size);
     content: counter(h1-count) "."counter(h2-count) "."counter(h3-count) "."counter(h4-count) "."counter(h5-count) "."counter(h6-count) "\00A0";
-} */
+}
 
 .b3-typography li>h1:before,
 .b3-typography li>h2:before,
@@ -662,7 +652,7 @@ mark {
 .b3-typography li>h5:before,
 .b3-typography li>h6:before {
     content: "";
-}
+} */
 
 /* 调整标题空行光标位置 */
 
@@ -877,12 +867,12 @@ div.sy__outline ul>ul{
 /* 展开优化 */
 .protyle-wysiwyg div[fold="1"][data-type="NodeHeading"]:before {
     content: "";
-    height: 100%;
+    height: 100% !important;
     background: var(--b3-border-color);
-    left: -18px;
-    top: 0%;
+    left: -18px !important;
+    top: 0% !important;
     border-radius: 3px;
-    margin-top: 0%;
+    margin-top: 0% !important;
 }
 
 /* 过长子标题名显示样式 */
@@ -938,17 +928,29 @@ div.sy__outline ul>ul{
     border-top: 1px solid #404040;
 } */
 
-.layout{
-    border-top: 1px solid #404040;
-} 
+/* .layout{
+    border-top: 20px solid #404040;
+    margin-top: 1px;
+}  */
 
-#dockLeft {
+.layout>.fn__flex:nth-child(3){
+    border-top: 1px solid #404040;
+    z-index: 1;
+}
+.dock#dockLeft{
+    border-right: 1px solid #404040;
+    box-sizing: border-box;
     border-top: 1px solid #404040;
 }
 
 .dock#dockTop{
     border-top: 1px solid #404040;
     border-bottom: 0px;
+}
+.dock#dockRight{
+    box-sizing: border-box;
+    border-left: 1px solid #404040;
+    border-top: 1px solid #404040;
 }
 
 #dockBottom{
@@ -959,12 +961,19 @@ div.sy__outline ul>ul{
     overflow-y: overlay !important;
 }
 
-.body--win32>.fn__flex-1:nth-child(5){
+/* 解决上下滑动的问题 */
+
+/* .body--win32>.fn__flex-1:nth-child(5){
     overflow: hidden !important;
 }
 #layouts > .fn__flex:nth-child(3) {
     overflow-y: hidden !important;
 }
+#layouts>.fn__flex:nth-child(3){
+    overflow-x:hidden !important;
+}  */
+/* 解决上下滑动的问题 */
+
 #layouts >.layout__resize:nth-child(5){
     margin: -4px 0;
 }
@@ -1370,3 +1379,7 @@ svg{
     width: 29.7cm;
     min-height: 21cm;
 } */
+
+.protyle-wysiwyg [data-node-id].hr>div {
+    border-bottom: 1px solid #505050;
+}
