@@ -368,7 +368,7 @@ function changeWidth(){
     config.width.enable = true;
   }else{
     for (i = 0; i < a.length; i++) {
-      a[i].style.width = "calc(100% - 4cm)";
+      a[i].style.width = "calc(100% - 10px)";
       a[i].style.boxShadow = "0 4px 20px 0 rgba(255, 255, 255, 0)";
       a[i].style.removeProperty('min-height');
       a[i].style.setProperty('margin','0px auto 0px','important');

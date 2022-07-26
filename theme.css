@@ -1383,3 +1383,7 @@ svg{
 .protyle-wysiwyg [data-node-id].hr>div {
     border-bottom: 1px solid #505050;
 }
+
+.status {
+    border-top: 1px solid #404040 !important;
+}
